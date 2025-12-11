@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Student } from '../types';
 import { SearchIcon, XIcon, ArrowRightIcon } from './Icons';
+import { APP_CONFIG } from '../constants';
 
 interface StudentListProps {
   students: Student[];
@@ -35,7 +36,7 @@ const StudentList: React.FC<StudentListProps> = ({ students }) => {
     <div className="flex flex-col h-full">
       {/* Sticky Header with Search and Filter */}
       <div className="sticky top-0 z-10 bg-white shadow-sm border-b border-gray-100 p-4 space-y-3">
-        <h1 className="text-2xl font-bold text-gray-800 text-center">אלפון מכינת בית אל</h1>
+        <h1 className="text-2xl font-bold text-gray-800 text-center">{APP_CONFIG.NAME}</h1>
         
         <div className="relative">
           <input
